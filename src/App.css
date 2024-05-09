@@ -1,38 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 .App {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #d8d5d0;
+}
+
+.leftside,
+.rightside {
+  width: 100px;
+}
+
+.rightside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  height: 80px;
+  font-size: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 95%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top-bot {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.centerleft,
+.centerright {
+  flex: 1;
+  box-sizing: border-box;
+  border-radius: 8%;
+  margin: 10px;
+  background-color: white;
+}
+
+.leftside,
+.rightside,
+.centerleft,
+.centerright {
+  box-sizing: border-box;
+}
+
+.leftside {
+  width: 100px;
+  height: 100vh;
+  background-color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.icon-button-top,
+.icon-button-bot {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 10px auto;
+  border: none;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-button-bot {
+  font-size: 20px;
+  color: #f6fcf6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-button-top {
+  font-size: 30px;
+  color: #f6fcf6;
 }
+
+.empty-space {
+  flex: 1;
+}
+
+hr {
+  width: 60%;
+  align-self: center;
+}
+
+img {
+  width: 28px;
+  height: 28px;
+}
+
+.centerleft {
+  flex: 1;
+}
+
+.centerright {
+  flex: 2;
+}
+
+.cl-pp img {
+  width: 150px;
+  height: 150px;
+  padding-top: 5%;
+}
+
+.left-bot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 10%;
+}
+
+.left-bot > div {
+  margin-bottom: 10px;
+}
+
+.left-bot > hr {
+  width: 80%;
+  margin: 10px 0;
+  align-self: flex-start;
+}
+
+.name-input {
+  font-size: large;
+  font-weight: bold;
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+.about,
+.location,
+.skills,
+.tools,
+.link {
+  font-weight: bold;
+}
+
+.cr-heading {
+  font-size: 60px;
+  padding: 4%;
+}
+
+.head-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 11%;
+  gap: 8%;
+  font-size: medium;
+}
+
+.head-container > div.active {
+  text-decoration: underline;
+}
+
+.add-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  margin: 4%;
+  background-color: rgb(233, 225, 225);
+  height: 90px;
+  padding: 0 20px;
+}
+
+.add-tab button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f6fcf6;
+  color: rgb(3, 3, 3);
+  font-size: 20px;
+  margin-right: 7%;
+}
+
+.add-tab > div,.info-one, .info-two {
+  font-size: 20px;
+}
+
+.add-tab > div:first-child {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: larger;
+  font-weight: 450;
+  text-align: left;
+}
+
+.desc{
+  text-align: left;
+}
+
+.head-container > div {
+  cursor: pointer;
+}
+
+.email-input{
+  font-size: medium;
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+.name-input,
+.email-input,
+.about-input,
+.location-input,
+.skills-input,
+.tools-input,
+.link-input {
+  border: none;
+  font-size: 16px;
+  width: 300px;
+}
+
+.info-one, .info-two  {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 20px;
+  border: slategray solid 1px;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 2%;
+  background-color: rgb(255, 255, 255);
+  height: 130px;
+  padding: 20px 35px;
+  box-sizing: border-box; /* Add this line */
+}
+.floating-btn {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background-color: #fcfcfc; /* Blue color */
+  color: rgb(250, 184, 1);
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust the space between buttons */
+}
+
+
