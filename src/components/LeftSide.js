@@ -1,5 +1,6 @@
 import React from "react";
 import MdImage from "./images/Md.png";
+import ppImage from "./images/pp.png";
 
 function LeftSide() {
   return (
@@ -9,13 +10,14 @@ function LeftSide() {
           <img src={MdImage} alt="Icon" /> {/* Use the imported image */}
         </button>
         <button className="icon-button-top">
-          <i class="fa-regular fa-user"></i>
-        </button>{" "}
-        <hr></hr>
+        <img src={ppImage} alt="Icon" style={{marginTop: "15px", height: "30px", width: "30px"}}/>
+
+        </button>
+        <hr style={{ borderColor: 'green' }}></hr>
         <button className="icon-button-top">
           <i class="fa-solid fa-palette"></i>
-        </button>{" "}
-        <hr></hr>
+        </button>
+        <hr style={{ borderColor: 'green' }}></hr>
       </div>
 
       <div className="button-wrapper">

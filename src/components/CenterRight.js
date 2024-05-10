@@ -1,50 +1,58 @@
 import React, { useState } from "react";
 
-function CenterRight() {
+function CenterRight({ userData }) {
   const [title, setTitle] = useState("Add Experience");
   const [desc, setDesc] = useState("Tell something about your experience");
 
-  const [infoTitle, setInfoTitle] = useState("Experience Title");
-  const [infoDesc, setInfoDesc] = useState(" Experience DescriptionExperience DescriptionExperience DescriptionExperience DescriptionExperience DescriptionExperience DescriptionExperience Description Experience Description DescriptionExperience DescriptionExperience");
+  const [infoTitle, setInfoTitle] = useState("Experience One");
+  const [infoDesc, setInfoDesc] = useState("Experience Description One");
 
   const [activeTab, setActiveTab] = useState("experience");
 
-  const handleEducationClick = () => {
-    setTitle("Add Education");
-    setDesc("Tell something about your education");
-    setInfoTitle("Education Title");
-    setInfoDesc("Education Description");
-    setActiveTab("education");
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+
+    // Update infoTitle and infoDesc based on the active tab
+    switch (tab) {
+      case "experience":
+        setInfoTitle(userData.Experience[0].infoTitle);
+        setInfoDesc(userData.Experience[0].infoDesc);
+        break;
+      case "education":
+        setInfoTitle(userData.Education[0].infoTitle);
+        setInfoDesc(userData.Education[0].infoDesc);
+        break;
+      case "certificates":
+        setInfoTitle(userData.Certificates[0].infoTitle);
+        setInfoDesc(userData.Certificates[0].infoDesc);
+        break;
+      default:
+        break;
+    }
   };
-  
-  const handleCertificatesClick = () => {
-    setTitle("Add Certificates");
-    setDesc("Tell something about your certificates");
-    setInfoTitle("Certificates Title");
-    setInfoDesc("Certificates Description");
-    setActiveTab("certificates");
-  };
-  
-  const handleExperienceClick = () => {
-    setTitle("Add Experience");
-    setDesc("Tell something about your experience");
-    setInfoTitle("Experience Title");
-    setInfoDesc("Experience Description");
-    setActiveTab("experience");
-  };
-  
 
   return (
     <div className="centerright">
       <div className="cr-heading">Add a professional one-liner</div>
       <div className="head-container">
-        <div className={`work ${activeTab === 'experience' ? 'active' : ''}`} onClick={handleExperienceClick}>
+        <div
+          className={`work ${activeTab === "experience" ? "active" : ""}`}
+          onClick={() => handleTabClick("experience")}
+        >
           WORK EXPERIENCE
         </div>
-        <div className={`education ${activeTab === 'education' ? 'active' : ''}`} onClick={handleEducationClick}>
+        <div
+          className={`education ${activeTab === "education" ? "active" : ""}`}
+          onClick={() => handleTabClick("education")}
+        >
           EDUCATION
         </div>
-        <div className={`certificates ${activeTab === 'certificates' ? 'active' : ''}`} onClick={handleCertificatesClick}>
+        <div
+          className={`certificates ${
+            activeTab === "certificates" ? "active" : ""
+          }`}
+          onClick={() => handleTabClick("certificates")}
+        >
           CERTIFICATES
         </div>
       </div>
@@ -61,10 +69,18 @@ function CenterRight() {
         <div className="info-one">
           <div className="title">{infoTitle}</div>
           <div className="desc">{infoDesc}</div>
+          <div className="info-btn">
+            <button style={{ fontWeight: "bold" }}>Edit Content</button>{" "}
+            <button style={{ border: "none" }}>Dismiss</button>
+          </div>
         </div>
         <div className="info-two">
           <div className="title">{infoTitle}</div>
           <div className="desc">{infoDesc}</div>
+          <div className="info-btn">
+            <button style={{ fontWeight: "bold" }}>Edit Content</button>{" "}
+            <button style={{ border: "none" }}>Dismiss</button>
+          </div>
         </div>
       </div>
     </div>

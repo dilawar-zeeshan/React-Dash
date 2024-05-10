@@ -2,7 +2,7 @@ import React from 'react';
 
 function FloatingBtns() {
   return (
-    <div className="floating-btns">
+    <div className="floating-btns" style={{marginTop:'35px'}}>
       <button className="floating-btn"><i class="fa-solid fa-palette"></i></button>
       <button className="floating-btn"><i class="fa-regular fa-clipboard"></i></button>
       <button className="floating-btn"><i class="fa-regular fa-copy"></i></button>
