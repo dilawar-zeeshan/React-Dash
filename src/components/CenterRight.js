@@ -1,34 +1,10 @@
 import React, { useState } from "react";
 
 function CenterRight({ userData }) {
-  const [title, setTitle] = useState("Add Experience");
-  const [desc, setDesc] = useState("Tell something about your experience");
-
-  const [infoTitle, setInfoTitle] = useState("Experience One");
-  const [infoDesc, setInfoDesc] = useState("Experience Description One");
-
-  const [activeTab, setActiveTab] = useState("experience");
+  const [activeTab, setActiveTab] = useState("Experience");
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-
-    // Update infoTitle and infoDesc based on the active tab
-    switch (tab) {
-      case "experience":
-        setInfoTitle(userData.Experience[0].infoTitle);
-        setInfoDesc(userData.Experience[0].infoDesc);
-        break;
-      case "education":
-        setInfoTitle(userData.Education[0].infoTitle);
-        setInfoDesc(userData.Education[0].infoDesc);
-        break;
-      case "certificates":
-        setInfoTitle(userData.Certificates[0].infoTitle);
-        setInfoDesc(userData.Certificates[0].infoDesc);
-        break;
-      default:
-        break;
-    }
   };
 
   return (
@@ -36,22 +12,22 @@ function CenterRight({ userData }) {
       <div className="cr-heading">Add a professional one-liner</div>
       <div className="head-container">
         <div
-          className={`work ${activeTab === "experience" ? "active" : ""}`}
-          onClick={() => handleTabClick("experience")}
+          className={`work ${activeTab === "Experience" ? "active" : ""}`}
+          onClick={() => handleTabClick("Experience")}
         >
           WORK EXPERIENCE
         </div>
         <div
-          className={`education ${activeTab === "education" ? "active" : ""}`}
-          onClick={() => handleTabClick("education")}
+          className={`education ${activeTab === "Education" ? "active" : ""}`}
+          onClick={() => handleTabClick("Education")}
         >
           EDUCATION
         </div>
         <div
           className={`certificates ${
-            activeTab === "certificates" ? "active" : ""
+            activeTab === "Certificates" ? "active" : ""
           }`}
-          onClick={() => handleTabClick("certificates")}
+          onClick={() => handleTabClick("Certificates")}
         >
           CERTIFICATES
         </div>
@@ -60,28 +36,35 @@ function CenterRight({ userData }) {
       <div className="add-tab">
         <button>+</button>
         <div>
-          <div className="title">{title}</div>
-          <div className="desc">{desc}</div>
+          <div className="title">
+            {activeTab === "Experience" && "Add Experience"}
+            {activeTab === "Education" && "Add Education"}
+            {activeTab === "Certificates" && "Add Certificates"}
+          </div>
+          <div className="desc">
+            {activeTab === "Experience" &&
+              "Tell something about your Experience"}
+            {activeTab === "Education" && "Tell something about your Education"}
+            {activeTab === "Certificates" &&
+              "Tell something about your certificates"}
+          </div>
         </div>
       </div>
 
       <div className="info-tab">
-        <div className="info-one">
-          <div className="title">{infoTitle}</div>
-          <div className="desc">{infoDesc}</div>
-          <div className="info-btn">
-            <button style={{ fontWeight: "bold" }}>Edit Content</button>{" "}
-            <button style={{ border: "none" }}>Dismiss</button>
-          </div>
-        </div>
-        <div className="info-two">
-          <div className="title">{infoTitle}</div>
-          <div className="desc">{infoDesc}</div>
-          <div className="info-btn">
-            <button style={{ fontWeight: "bold" }}>Edit Content</button>{" "}
-            <button style={{ border: "none" }}>Dismiss</button>
-          </div>
-        </div>
+        {userData[activeTab].map(
+          (item, index) => (
+            <div className="info-one" key={index}>
+              <div className="title">{item.infoTitle}</div>
+              <div className="date">{item.infoDate}</div>
+              <div className="desc">{item.infoDesc}</div>
+              <div className="info-btn">
+                <button style={{ fontWeight: "bold" }}>Edit Content</button>{" "}
+                <button style={{ border: "none", background:'transparent' }}>Dismiss</button>
+              </div>
+            </div>
+          )
+        )}
       </div>
     </div>
   );

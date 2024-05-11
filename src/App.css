@@ -2,13 +2,13 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  background-color: #f5f3f0;
 }
 
 .App {
   display: flex;
   width: 100%;
   height: 100vh;
-  background-color: #f5f3f0;
 }
 
 
@@ -40,7 +40,7 @@ body {
 .centerleft,
 .centerright {
   box-sizing: border-box;
-  border-radius: 2%;
+  border-radius: 22px;
   margin: 7px;
   background-color: white;
 }
@@ -53,7 +53,7 @@ body {
 }
 
 .leftside {
-  width: 60px;
+  width: 62px;
   height: 100vh;
   background-color: black;
   display: flex;
@@ -64,6 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  
 }
 
 .icon-button-top,
@@ -72,22 +73,26 @@ body {
   height: 40px;
   background-color: transparent;
   border-radius: 50%;
-  margin: 10px auto;
+  margin: 7px auto;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  
 }
 
 .icon-button-bot {
-  font-size: 20px;
-  color: #fcfcf6;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
 }
 
 .icon-button-top {
-  font-size: 24px;
+  font-size: 20px;
   color: rgb(250, 184, 1);
 }
+
+
 
 .empty-space {
   flex: 1;
@@ -99,24 +104,25 @@ hr {
 }
 
 img {
-  
-  width: 35px;
-  height: 35px;
+  width: 44px;
+  height: 40px;
 }
 
 .centerleft {
-  flex: 1.5;
+  flex: 2;
+  margin-left: 6%;
+ 
 
 }
 
 .centerright {
   flex: 4;
-  margin-right: 5%;
+  margin-right: 9%;
 }
 
 .cl-pp img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   padding-top: 5%;
 }
 
@@ -133,15 +139,14 @@ img {
 }
 
 
+
 .left-bot > hr {
   width: 80%;
-  margin: 10px 0;
+  margin: 15px 0px;
   align-self: flex-start;
 }
 
 .name-input {
-  font-size: large;
-  font-weight: bold;
   padding-bottom: 3%;
   text-align: center;
 }
@@ -151,22 +156,26 @@ img {
 .skills,
 .tools,
 .link {
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 14px;
+  
 }
 
 .cr-heading {
   font-size: 60px;
   padding: 4%;
+  text-align: left;
 }
 
 .head-container {
+  margin-top: 3%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-left: 11%;
+  padding-left: 4%;
   gap: 8%;
-  font-size: medium;
+  font-size: 13px;
   
 }
 
@@ -185,14 +194,14 @@ img {
   align-items: center;
   border-radius: 20px;
   margin: 4%;
-  background-color: #FEF9F3;
-  height: 90px;
+  background-color: rgba(255, 192, 145, 0.1);
+  height: 120px;
   padding: 0 20px;
 }
 
 .add-tab button {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #f6fcf6;
   color: rgb(3, 3, 3);
@@ -210,14 +219,16 @@ img {
 }
 
 .title {
-  font-size: large;
-  font-weight: 450;
+  font-size: 20px;
+  font-weight: 400;
   text-align: left;
+  margin-bottom: 10px;
 }
 
-.desc{
+.desc, .date{
   text-align: left;
-  font-size: medium;
+  font-size: 14px;
+  color: rgb(108, 107, 106);
 }
 
 .head-container > div {
@@ -242,7 +253,7 @@ img {
   width: 300px;
 }
 
-.info-one, .info-two  {
+.info-one  {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -253,28 +264,30 @@ img {
   margin-right: 4%;
   margin-top: 1%;
   background-color: rgb(255, 255, 255);
-  height: 150px;
+  height: 220px;
   padding: 20px 35px;
-  box-sizing: border-box; /* Add this line */
+  box-sizing: border-box;
+  
 }
 
 .info-btn  {
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  margin-left: 80%;
-  margin-top: 25px;
+  gap: 5px;
+  margin-left: 70%;
+  margin-top: 80px;
+  
  
 }
 
-.info-btn button{
+.info-btn button {
 
-  width: 90px;
-  height: 25px;
+  width: 125px;
+  height: 35px;
   border: solid rgb(192, 182, 182) 1px;
   background-color: white;
-  border-radius: 340px; /* Adjust the value as needed */
-  color: rgb(3, 3, 3);
+  border-radius: 22px; /* Adjust the value as needed */
+  color: rgb(108, 107, 106);
   font-size: 11px;
 }
 

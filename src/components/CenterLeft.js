@@ -11,7 +11,7 @@ function CenterLeft({ userData }) {
       </div>
       <div className="name">
         <input
-          style={{ fontSize: "20px" }}
+          style={{ fontSize: "32px" , fontWeight:'545'}}
           type="text"
           name="name"
           value={userData.name}
@@ -21,6 +21,7 @@ function CenterLeft({ userData }) {
       </div>
       <div className="email">
         <input
+        style={{color:'rgb(108, 107, 106)'}}
           type="text"
           name="email"
           value={userData.email}
@@ -30,8 +31,9 @@ function CenterLeft({ userData }) {
       </div>
       <div className="left-bot">
         <hr className="hr" />
-        <div className="about"> ABOUT ME </div>
+        <div className="about"> ABOUT ME <i class="fa-solid fa-circle-info" ></i> </div>
         <input
+        style={{color:'rgb(108, 107, 106)'}}
           type="text"
           name="about"
           value={userData.about}
@@ -39,8 +41,8 @@ function CenterLeft({ userData }) {
           readOnly
         />
         <hr className="hr" />
-        <div className="location"> LOCATION </div>
-        <input
+        <div className="location"> LOCATION <i class="fa-solid fa-circle-info"></i> </div>
+        <input style={{color:'rgb(108, 107, 106)'}}
           type="text"
           name="location"
           value={userData.location}
@@ -48,8 +50,9 @@ function CenterLeft({ userData }) {
           readOnly
         />
         <hr className="hr" />
-        <div className="skills"> SKILLS </div>
-        <input
+        <div className="skills"> SKILLS <i class="fa-solid fa-circle-info"></i></div>
+        <input 
+        style={{color:'rgb(108, 107, 106)'}}
           type="text"
           name="skills"
           value={userData.skills}
@@ -57,8 +60,9 @@ function CenterLeft({ userData }) {
           readOnly
         />
         <hr className="hr" />
-        <div className="tools"> TOOLS </div>
+        <div className="tools"> TOOLS <i class="fa-solid fa-circle-info"></i></div>
         <input
+        style={{color:'rgb(108, 107, 106)'}}
           type="text"
           name="tools"
           value={userData.tools}
@@ -66,8 +70,9 @@ function CenterLeft({ userData }) {
           readOnly
         />
         <hr className="hr" />
-        <div className="link"> LINK </div>
+        <div className="link"> LINK <i class="fa-solid fa-circle-info"></i></div>
         <input
+        style={{color:'rgb(108, 107, 106)'}}
           type="text"
           name="link"
           value={userData.link}

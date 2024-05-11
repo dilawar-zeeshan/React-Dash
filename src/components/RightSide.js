@@ -16,25 +16,39 @@ function RightSide() {
     link: "github.com/dilawar-zeeshan",
     Experience: [
       {
-        title: "Add Experience ",
-        desc: "description of Experience ",
         infoTitle: 'Experience one',
+        infoDate: 'May 2024 - May 2024',
         infoDesc: 'Experience Description One'
+      },
+      {
+        infoTitle: 'Experience Two',
+        infoDate: 'May 2024 - May 2024',
+        infoDesc: 'Experience Description Two'
+      },
+      {
+        infoTitle: 'Experience Three',
+        infoDate: 'May 2024 - May 2024',
+        infoDesc: 'Experience Description Three'
       },
     ],
     Certificates: [
       {
-        title: "Add Certificates ",
-        desc: "description of Certificates ",
+ 
         infoTitle: 'Certificate one',
+        infoDate: 'May 2024 - May 2024',
         infoDesc: 'Certificate Description One'
+      },
+      {
+ 
+        infoTitle: 'Certificate Two',
+        infoDate: 'May 2024 - May 2024',
+        infoDesc: 'Certificate Description Two'
       },
     ],
     Education: [
       {
-        title: "Add Education ",
-        desc: "description of Education",
         infoTitle: 'Education one',
+        infoDate: 'May 2024 - May 2024',
         infoDesc: 'Education Description One'
       },
     ],
@@ -44,7 +58,7 @@ function RightSide() {
   return (
     <div className="rightside">
       <div className="header">
-        <button className="icon-button-top">
+        <button className="icon-button-top" style={{marginRight:'10px'}}>
           <img src={ppImage} alt="Icon" />
         </button>
       </div>

@@ -7,17 +7,18 @@ function LeftSide() {
     <div className="leftside">
       <div className="button-wrapper">
         <button className="icon-button-top">
-          <img src={MdImage} alt="Icon" /> {/* Use the imported image */}
+          <img src={MdImage} alt="Icon" style={{ marginTop: "20px" }} />
         </button>
-        <button className="icon-button-top">
-        <img src={ppImage} alt="Icon" style={{marginTop: "15px", height: "30px", width: "30px"}}/>
-
-        </button>
-        <hr style={{ borderColor: 'green' }}></hr>
-        <button className="icon-button-top">
-          <i class="fa-solid fa-palette"></i>
-        </button>
-        <hr style={{ borderColor: 'green' }}></hr>
+        <div style={{ marginTop: "50px" }}> {/* Wrapping the icons and applying margin */}
+          <button className="icon-button-top">
+            <img src={ppImage} alt="Icon" style={{ height: "30px", width: "30px" }} />
+          </button>
+          <hr style={{ borderColor: 'green' }} />
+          <button className="icon-button-top">
+            <i class="fa-solid fa-palette"></i>
+          </button>
+          <hr style={{ borderColor: 'green' }} />
+        </div>
       </div>
 
       <div className="button-wrapper">
